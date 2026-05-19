@@ -44,6 +44,8 @@ maintainers:
     X: apievangelist
     url: https://apievangelist.com
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/a-o-smith-corporation
   - type: Portal
     url: https://www.aosmith.com
   - type: TermsOfService
