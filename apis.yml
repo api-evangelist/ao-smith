@@ -44,6 +44,8 @@ maintainers:
     X: apievangelist
     url: https://apievangelist.com
 common:
+  - type: DomainSecurity
+    url: security/ao-smith-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/a-o-smith-corporation
   - type: Portal
