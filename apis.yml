@@ -21,7 +21,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ao-smith.p
 url: https://raw.githubusercontent.com/api-evangelist/ao-smith/refs/heads/main/apis.yml
 created: "2026-03-23"
 modified: "2026-04-19"
-specificationVersion: '0.16'
+specificationVersion: '0.23'
 tags:
   - IoT
   - Manufacturing
