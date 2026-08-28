@@ -5,6 +5,17 @@ description: >-
   connected water heater products with IoT capabilities through its iCOMM
   connected technology platform, enabling remote monitoring and control of water
   heating systems via mobile app and third-party integrations.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
