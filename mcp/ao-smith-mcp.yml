@@ -1,0 +1,37 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  Searched A. O. Smith's corporate site, the hotwater.com brand site, the 3scale developer
+  portal on their own OpenShift cluster, npm and PyPI for a published MCP server, and
+  probed the iCOMM backend (r2.wh8.co) directly. Nothing exists.
+provider: AO Smith
+providerId: ao-smith
+status: none
+tool_count: 0
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+note: >-
+  A. O. Smith ships no MCP server, remote or stdio, and there is no OpenAPI to derive a
+  candidate tool list from — the only live API surface is an undocumented Apollo GraphQL
+  endpoint at https://r2.wh8.co/graphql with introspection disabled, so even a derived
+  tool set would have to be invented. No candidate tools are listed and NO `MCPServer`
+  pointer is emitted; an agent cannot reach A. O. Smith today by any protocol.
+evidence:
+  - url: https://r2.wh8.co/graphql
+    method: POST
+    status: 200
+    result: >-
+      GRAPHQL_VALIDATION_FAILED — "GraphQL introspection is not allowed by Apollo Server".
+      A live, deliberately closed schema.
+  - url: https://3scale.apps.aosmith-prod.hd1m.p1.openshiftapps.com/docs
+    status: 200
+    result: Stock 3scale portal; no API documented, no ActiveDocs, no spec.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    url: https://apievangelist.com

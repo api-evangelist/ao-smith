@@ -1,10 +1,14 @@
 name: AO Smith
 description: >-
-  A. O. Smith Corporation is a global manufacturer of residential and commercial
-  water heaters, boilers, and water treatment products. AO Smith offers
-  connected water heater products with IoT capabilities through its iCOMM
-  connected technology platform, enabling remote monitoring and control of water
-  heating systems via mobile app and third-party integrations.
+  A. O. Smith Corporation (NYSE: AOS) is a global manufacturer of residential and
+  commercial water heaters, boilers, water treatment and air purification products,
+  headquartered in Milwaukee, Wisconsin. Its connected-product line runs on the iCOMM
+  platform, which lets homeowners and plumbing professionals monitor and control
+  compatible water heaters — temperature, vacation mode, leak and maintenance alerts,
+  energy-use history — from a mobile app. A. O. Smith operates no public developer
+  program: there is no developer portal, API reference, OpenAPI, SDK or MCP server, and
+  the iCOMM backend is an undocumented GraphQL endpoint reachable only by the mobile apps
+  and by community clients that reverse-engineered it.
 deliveryModel:
   model: saas
   open_source: false
@@ -31,24 +35,33 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ao-smith.png
 url: https://raw.githubusercontent.com/api-evangelist/ao-smith/refs/heads/main/apis.yml
 created: "2026-03-23"
-modified: "2026-04-19"
+modified: "2026-09-02"
 specificationVersion: '0.23'
 tags:
   - IoT
   - Manufacturing
   - Smart Home
   - Water Heaters
+  - Connected Products
+  - Water Treatment
+  - Boilers
+  - Consumer Hardware
 apis:
   - name: AO Smith iCOMM Connected Technology
     description: >-
-      AO Smith's iCOMM connected technology platform enables remote monitoring
-      and control of compatible AO Smith water heaters through the A. O. Smith
-      mobile app. Provides connectivity for tracking water usage, setting
-      temperature, enabling vacation mode, and receiving maintenance alerts.
-      Third-party integrations are available for home automation platforms.
+      AO Smith's iCOMM connected technology platform enables remote monitoring and control
+      of compatible AO Smith water heaters through the A. O. Smith and iCOMM Connectivity
+      mobile apps — tracking water and energy usage, setting temperature, enabling vacation
+      mode, and receiving leak and maintenance alerts. It is NOT a published developer API.
+      The base URL below is the Apollo GraphQL endpoint the mobile apps call; it was
+      established as A. O. Smith infrastructure because r2.wh8.co CNAMEs to
+      router-default.apps.aosmith-prod.hd1m.p1.openshiftapps.com, the same OpenShift
+      cluster that serves A. O. Smith's 3scale portal. It is undocumented, credentialed,
+      and returns "GraphQL introspection is not allowed" to any schema query. The value
+      previously recorded here, https://api.aosmith.com, has no DNS record at all.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.aosmith.com/connected/
-    baseURL: https://api.aosmith.com
+    humanURL: https://www.hotwater.com/water-heaters/residential/connected/
+    baseURL: https://r2.wh8.co
     tags:
       - Connected Products
       - IoT
@@ -56,10 +69,10 @@ apis:
       - Water Heaters
     properties:
       - type: Documentation
-        url: https://www.aosmith.com/connected/
+        url: https://www.hotwater.com/resources/mobile-apps.html
     contact:
       - FN: AO Smith Customer Support
-        url: https://www.aosmith.com/contact/
+        url: https://www.aosmith.com/about-us/contact.html
 
 maintainers:
   - FN: Kin Lane
@@ -67,13 +80,49 @@ maintainers:
     X: apievangelist
     url: https://apievangelist.com
 common:
+  - type: Website
+    url: https://www.aosmith.com/
   - type: DomainSecurity
     url: security/ao-smith-domain-security.yml
+  - type: Packages
+    url: packages/ao-smith-packages.yml
+  - type: LLMsTxt
+    url: llms/ao-smith-llms.txt
   - type: LinkedIn
     url: https://www.linkedin.com/company/a-o-smith-corporation
   - type: Portal
     url: https://www.aosmith.com
+  - type: Support
+    url: https://www.aosmith.com/about-us/contact.html
+  - type: Blog
+    url: https://www.aosmith.com/news.html
   - type: TermsOfService
-    url: https://www.aosmith.com/legal/terms-of-use/
+    url: https://www.aosmith.com/terms-and-conditions.html
   - type: PrivacyPolicy
-    url: https://www.aosmith.com/legal/privacy-policy/
+    url: https://www.aosmith.com/privacy-policy
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    A. O. Smith ships connected water heaters but no developer program — the iCOMM platform
+    is an end-user mobile app whose only backend is an undocumented Apollo GraphQL endpoint
+    with introspection disabled, and the Red Hat 3scale portal on A. O. Smith's own
+    OpenShift cluster is a stock unconfigured install advertising nothing but 3scale's
+    built-in "Echo API" demo.
+  evidence:
+    - url: https://r2.wh8.co/graphql
+      status: 200
+    - url: https://3scale.apps.aosmith-prod.hd1m.p1.openshiftapps.com/
+      status: 200
+    - url: https://api.aosmith.com/
+      status: 0
+    - url: https://www.aosmith.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.hotwater.com/llms.txt
+      status: 404
+  checked: '2026-09-02'

@@ -3,89 +3,44 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: AO Smith
 providerId: ao-smith
+generated: '2026-09-02'
+method: searched
+source: https://www.hotwater.com/resources/mobile-apps.html
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-02'
 tags:
   - IoT
   - Manufacturing
   - Smart Home
   - Water Heaters
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the AO Smith API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - AO Smith iCOMM Connected Technology
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - AO Smith iCOMM Connected Technology
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - AO Smith iCOMM Connected Technology
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - AO Smith iCOMM Connected Technology
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - AO Smith iCOMM Connected Technology
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+limit_count: 0
+limits: []
+headers: {}
+responseCodes: {}
+description: >-
+  A. O. Smith documents no API rate limits. There is no developer reference, no published
+  throttling policy, and no documented response headers, because there is no published API
+  — the only live surface is an undocumented Apollo GraphQL endpoint serving the iCOMM
+  mobile app. An honest zero: nothing about A. O. Smith's runtime limit behaviour is
+  knowable from what they publish.
+note: >-
+  REPLACES A FABRICATED SCAFFOLD. Until 2026-09-02 this file asserted five rate limits
+  (10/100/1000 requests per minute across free/professional/enterprise tiers), an
+  X-RateLimit-* header family and a RateLimit-Policy header, none of which A. O. Smith has
+  ever published. It was written by the 2026-05-04 bulk sweep (roadmap#35). Per STEP 24,
+  undocumented limits are recorded as limit_count 0 rather than as placeholder numbers —
+  this deliberately drops the agent-readiness `rate_limit_signal` credit the invented
+  artifact was earning.
+searched:
+  - url: https://www.hotwater.com/resources/mobile-apps.html
+    status: 200
+    finding: Consumer app documentation only; no limits, no headers.
+  - url: https://r2.wh8.co/graphql
+    status: 200
+    finding: >-
+      Live Apollo Server; introspection disabled and unauthenticated calls are rejected, so
+      no limit headers were observable on an anonymous response.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com

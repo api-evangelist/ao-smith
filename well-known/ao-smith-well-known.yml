@@ -1,0 +1,161 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live GET probes issued 2026-09-02 against every host A. O. Smith is known to operate:
+  the corporate site, the hotwater.com brand site, the iCOMM mobile-app GraphQL backend
+  (r2.wh8.co), and the 3scale developer portal on A. O. Smith's own OpenShift cluster.
+provider: AO Smith
+providerId: ao-smith
+hit_count: 0
+path_echo_control: passed
+soft_404_control: >-
+  Both Salesforce Commerce Cloud storefronts (www.aosmith.com, www.hotwater.com) return a
+  branded HTML 404 page of 86KB / 162KB for every /.well-known/* path, including the
+  random negative-control path. The negative control returned 404 on all four hosts, so no
+  host echoes paths and no 200 was recorded anywhere. Nothing was saved to disk and NO
+  WellKnown or SecurityTxt pointer is emitted.
+hosts:
+  - host: https://www.aosmith.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/ao-smith-negative-control-7f3ab91c.json
+        status: 404
+        file: null
+        control: negative
+  - host: https://www.hotwater.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/ao-smith-negative-control-7f3ab91c.json
+        status: 404
+        file: null
+        control: negative
+  - host: https://r2.wh8.co
+    note: >-
+      The iCOMM mobile-app GraphQL backend. CNAMEs to
+      router-default.apps.aosmith-prod.hd1m.p1.openshiftapps.com, which is how this host
+      was established as A. O. Smith infrastructure rather than a vendor's.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/ao-smith-negative-control-7f3ab91c.json
+        status: 404
+        file: null
+        control: negative
+  - host: https://3scale.apps.aosmith-prod.hd1m.p1.openshiftapps.com
+    note: >-
+      A. O. Smith's Red Hat 3scale developer portal, running on their own OpenShift
+      cluster. It is a stock unconfigured install — the only API it advertises is 3scale's
+      built-in "Echo API" demo.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/ao-smith-negative-control-7f3ab91c.json
+        status: 404
+        file: null
+        control: negative
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    url: https://apievangelist.com

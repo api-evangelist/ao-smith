@@ -1,0 +1,53 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  Registry metadata read 2026-09-02 from registry.npmjs.org and pypi.org, plus the
+  upstream README at github.com/bdr99/py-aosmith. A. O. Smith publishes no first-party
+  client library on npm, PyPI, RubyGems, Packagist, crates.io, NuGet, Maven Central or
+  pkg.go.dev; every package below is a third-party, reverse-engineered client for the
+  iCOMM mobile-app backend and says so in its own README.
+provider: AO Smith
+providerId: ao-smith
+official_package_count: 0
+package_count: 2
+note: >-
+  NO FIRST-PARTY SDK EXISTS. Both entries are community clients written against the
+  undocumented GraphQL endpoint the A. O. Smith mobile app calls. The py-aosmith README
+  states verbatim "This is not an official API, and it may stop working at any time
+  without warning" and "This project is not affiliated with or endorsed by A. O. Smith."
+  They are recorded here as evidence of unmet integrator demand, not as an A. O. Smith
+  developer surface, and NO `SDKs` pointer is emitted for them.
+packages:
+  - language: python
+    registry: pypi
+    name: py-aosmith
+    url: https://pypi.org/project/py-aosmith/
+    install: pip install py-aosmith
+    official: false
+    version: 1.0.18
+    published: '2026-05-21'
+    repository: https://github.com/bdr99/py-aosmith
+    summary: A Python client library for A. O. Smith water heaters
+    note: >-
+      Third-party. Backs the `aosmith` integration in Home Assistant core. Actively
+      maintained — last release 2026-05-21, which is more recent than anything
+      A. O. Smith itself publishes for developers.
+  - language: javascript
+    registry: npm
+    name: node-aosmith
+    url: https://www.npmjs.com/package/node-aosmith
+    install: npm install node-aosmith
+    official: false
+    version: 1.0.1
+    published: '2023-11-27'
+    repository: https://github.com/bdr99/node-aosmith
+    summary: >-
+      API client for A. O. Smith iCOMM-enabled water heaters, driving the same endpoint
+      as the A. O. Smith mobile app.
+    note: >-
+      Third-party. Last published 2023-11-27 — nearly three years stale, an abandonment
+      signal on the community side of an API the vendor never documented.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    url: https://apievangelist.com
