@@ -1,7 +1,9 @@
 ---
 title: A. O. Smith and The Water Council announce ... - Investor Relations
 url: https://investor.aosmith.com/node/17986/pdf
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"A.O. Smith" press release artificial intelligence'
 position: 1
 source: serpapi-google

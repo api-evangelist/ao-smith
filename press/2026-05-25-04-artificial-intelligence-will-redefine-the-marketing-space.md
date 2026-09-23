@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence will redefine the marketing space
 url: https://www.exchange4media.com/digital-news/artificial-intelligence-will-redefine-the-marketing-space-143435.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"A.O. Smith" press release artificial intelligence'
 position: 4
 source: serpapi-google

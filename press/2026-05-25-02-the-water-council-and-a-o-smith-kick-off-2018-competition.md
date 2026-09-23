@@ -1,7 +1,9 @@
 ---
 title: The Water Council and A. O. Smith Kick Off 2018 Competition ...
 url: https://investor.aosmith.com/news-releases/news-release-details/water-council-and-o-smith-kick-2018-competition-supporting
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"A.O. Smith" press release artificial intelligence'
 position: 2
 source: serpapi-google
