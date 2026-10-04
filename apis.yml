@@ -47,7 +47,8 @@ tags:
   - Boilers
   - Consumer Hardware
 apis:
-  - name: AO Smith iCOMM Connected Technology
+  - x-published: false
+    name: AO Smith iCOMM Connected Technology
     description: >-
       AO Smith's iCOMM connected technology platform enables remote monitoring and control
       of compatible AO Smith water heaters through the A. O. Smith and iCOMM Connectivity
