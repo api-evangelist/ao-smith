@@ -1,0 +1,90 @@
+edges:
+- partner_name: US EPA ENERGY STAR
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.energystar.gov/d/8wj2-sec8
+  category: ENERGY STAR product certification
+  contract_reference:
+    register: ENERGY STAR Model Index, all currently certified models (data.energystar.gov/resource/8wj2-sec8)
+    standard: ENERGY STAR (US EPA product specifications)
+    spec_file: null
+    role: energy-star-partner
+    registered_name: A.O. Smith Corporation
+    register_id: https://data.energystar.gov/d/8wj2-sec8
+    matched_domain: aosmith.com
+    matched_by: domain
+    certified_products:
+    - product: Commercial Water Heaters
+      product_type: Commercial Water Heaters
+      lapsed: false
+      brands:
+      - A. O. Smith
+      - AO Smith
+      - American
+      - Lochinvar
+      - RELIANCE WATER HEATERS
+      - State
+      first_certified: '2019-02-21'
+      connected: true
+      connected_protocols:
+      - CTA-2045
+      - CTA-2045-A
+      - CTA-2045-B
+    - product: Water Heaters - Non Solar Electric and Non Solar Gas
+      product_type: Water Heaters - Non Solar Electric and Non Solar Gas
+      lapsed: false
+      brands:
+      - A. O. Smith
+      - American
+      - Envirosense
+      - Envirosense Enercare
+      - Envirosense Reliance Home Comfort
+      - GSW WATER HEATERS
+      - John Wood
+      - Lochinvar
+      - RELIANCE WATER HEATERS
+      - State
+      first_certified: '2023-02-23'
+      connected: true
+      connected_protocols:
+      - CTA-2045
+      - CTA-2045-A
+      - CTA-2045-B
+    - product: Heat Pump Water Heaters
+      product_type: Heat Pump Water Heaters
+      lapsed: false
+      connected: true
+      source_note: certified model in the category dataset; not (yet) in the Model Index
+      connected_protocols:
+      - CTA-2045
+      - CTA-2045-A
+      - CTA-2045-B
+    connected_product_types:
+    - Commercial Water Heaters
+    - Heat Pump Water Heaters
+    - Water Heaters - Non Solar Electric and Non Solar Gas
+    signal_note: 'certified_products = ONE entry per ENERGY STAR product category with a currently certified model
+      (the Model Index lists current certifications only, so lapsed is False; delisted models drop out); connected:
+      true where the category''s dataset flags connected / network capability for this partner''s models (Smart
+      Thermostats and Connected lighting are connected by definition). Brands are context; model counts are never
+      counted.'
+    detected_by: sweep-energy-star-certified-products.py
+    detected: '2026-10-22'
+    identity: wikidata Q4648219 'A. O. Smith' P856 https://www.aosmith.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-energy-star-certified-products.py
+  first_seen: '2026-10-22'
+generated: '2026-10-22'
+method: searched
+source:
+- https://data.energystar.gov/api/views/metadata/v1
+- https://data.energystar.gov/resource/8wj2-sec8.json
+- https://www.energystar.gov/productfinder/
+checked:
+- https://data.energystar.gov/api/views/metadata/v1
+- https://data.energystar.gov/resource/8wj2-sec8.json
+- https://www.energystar.gov/productfinder/
