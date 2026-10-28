@@ -1,4 +1,4 @@
-# AO Smith (ao-smith)
+# AO Smith
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,44 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A. O. Smith Corporation is a global manufacturer of residential and commercial water heaters, boilers, and water treatment products. AO Smith offers connected water heater products with IoT capabilities through its iCOMM connected technology platform.
+A. O. Smith Corporation (NYSE: AOS) is a global manufacturer of residential and commercial water heaters, boilers, water treatment and air purification products, headquartered in Milwaukee, Wisconsin. Its connected-product line runs on the iCOMM platform, which lets homeowners and plumbing professionals monitor and control compatible water heaters — temperature, vacation mode, leak and maintenance alerts, energy-use history — from a mobile app. A. O. Smith operates no public developer program: there is no developer portal, API reference, OpenAPI, SDK or MCP server, and the iCOMM backend is an undocumented GraphQL endpoint reachable only by the mobile apps and by community clients that reverse-engineered it.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/ao-smith/refs/heads/main/apis.yml)
+**Areas:** IoT · Manufacturing · Smart Home · Water Heaters · Connected Products · Water Treatment · Boilers · Consumer Hardware
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## AO Smith on APIs.io
 
-## Tags:
+Everything profiled for AO Smith is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ao-smith/](https://apis.io/providers/ao-smith/)** — or go straight to one of the APIs or properties below.
 
- - IoT, Manufacturing, Smart Home, Water Heaters
+### APIs (1)
 
-## Timestamps
+- [AO Smith iCOMM Connected Technology](https://apis.io/apis/ao-smith/ao-smith-icomm-connected-technology/) — AO Smith's iCOMM connected technology platform enables remote monitoring and control of compatible AO Smith water heaters through the A. O. Smith and iCOMM…
 
-- **Created:** 2026-03-23
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AO Smith iCOMM Connected Technology
-AO Smith's iCOMM connected technology platform enables remote monitoring and control of compatible AO Smith water heaters, tracking water usage, setting temperature, enabling vacation mode, and receiving maintenance alerts.
+#### Security (1)
 
-**Human URL:** [https://www.aosmith.com/connected/](https://www.aosmith.com/connected/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Ao Smith Domain Security](https://apis.io/security/ao-smith/ao-smith-domain-security/)
 
- - Connected Products, IoT, Smart Home, Water Heaters
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://www.aosmith.com/connected/)
+- [Ao Smith Plans Pricing](https://apis.io/plans/ao-smith/ao-smith-plans-pricing/)
 
-## Common Properties
+#### Rate limits (1)
 
-- [Portal](https://www.aosmith.com)
-- [TermsOfService](https://www.aosmith.com/legal/terms-of-use/)
-- [PrivacyPolicy](https://www.aosmith.com/legal/privacy-policy/)
+Published request limits.
 
-## Maintainers
+- [Ao Smith Rate Limits](https://apis.io/rate-limits/ao-smith/ao-smith-rate-limits/)
 
-**FN:** Kin Lane
+#### FinOps (1)
 
-**Email:** info@apievangelist.com
+What the API costs to run, by operation.
+
+- [Ao Smith Finops](https://apis.io/finops/ao-smith/ao-smith-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aosmith.com/)
+- [Support](https://www.aosmith.com/about-us/contact.html)
+- [Blog](https://www.aosmith.com/news.html)
+- [Terms of service](https://www.aosmith.com/terms-and-conditions.html)
+- [Privacy policy](https://www.aosmith.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 15.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ao-smith/](https://apis.io/providers/ao-smith/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AO Smith: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ao-smith/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
